@@ -251,37 +251,3 @@ def decoder(params, inputs, encoder_outputs, vocab_size, reuse=None, scope="deco
         return outputs
 
 
-# x = embedding(tf.reshape(tf.range(5 * 10), [5, 10]), 50, 20)
-# x = position_encoding(10, 8, 30)
-# x = feed_forward(tf.to_float(tf.reshape(tf.range(32 * 10 * 8), [32, 10, 8])), [40, 8])
-# x = label_smoothing(tf.to_float(tf.reshape(tf.range(32 * 10 * 8), [32, 10, 8])), 0.1)
-# inputs2 = tf.to_float(tf.reshape(tf.range(10 * 5 * 6), [10, 5, 6]))
-# x = tf.contrib.linalg.LinearOperatorTriL(inputs).to_dense()
-# inputs = tf.ones(shape=[10, 5], dtype=tf.int32)
-# pad_mask = get_self_atten_mask(inputs1, 3, "future_mask")
-# x = multi_head_attention(
-#     inputs2,
-#     inputs2,
-#     inputs2,
-#     6,
-#     3,
-#     pad_mask=pad_mask
-# )
-# x = encoder(inputs, 10, 20, 5, 8, 4, 1, reuse=None, scope="encoder")
-# inputs = tf.to_int32(tf.reshape(tf.range(10 * 5), [10, 5]))
-# x = inputs[:, :-1]
-# x = tf.minimum(2.4, 5)
-# inputs = tf.to_int32(tf.reshape(tf.range(5 * 10), [5, 10]))
-# encoder_outputs = tf.to_float(tf.reshape(tf.range(5 * 10 * 64), [5, 10, 64]))
-# from transformer import parameters as params
-# # x = decoder(params, inputs, encoder_outputs, 50, reuse=None, scope="decoder")
-# x = tf.layers.dense(encoder_outputs, 20, activation=None)
-#
-# with tf.Session() as sess:
-    # sess.run(tf.global_variables_initializer())
-    # print(sess.run(tf.multiply(2.0, 1.1)))
-#     # print(sess.run(inputs).shape)
-#     print(sess.run(x).shape)
-
-
-
